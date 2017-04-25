@@ -1,6 +1,8 @@
 FROM python:3.5
 RUN pip install Flask==0.11.1 redis==2.10.5
 RUN useradd -ms /bin/bash admin
+RUN pip install docker-compose
+RUN pip install --upgrade pip
 USER admin
 COPY app /app
 WORKDIR /app
